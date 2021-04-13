@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>NGINX</Name>
-  <Repository>harrywebster/nginx</Repository>
-  <Registry>https://hub.docker.com/r/harrywebster/nginx</Registry>
+  <Name>NGINX with PHP and Phalcon</Name>
+  <Repository>harrywebster/unraid-nginx</Repository>
+  <Registry>https://hub.docker.com/repository/docker/harrywebster/unraid-nginx</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
   <Support></Support>
   <Project/>
-  <Overview>Self-hosted website using NGINX.</Overview>
+  <Overview>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Overview>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <ExtraParams/>
@@ -18,7 +18,7 @@
   <DonateLink/>
   <DonateImg/>
   <MinVer/>
-  <Description>Self-hosted website using NGINX.</Description>
+  <Description>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -32,5 +32,22 @@
   <Data/>
   <Environment/>
   <Labels/>
-  <Config Name="Host Port 1" Target="80" Default="8080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config
+			Name="Host Port 1"
+			Target="80"
+			Default="8080"
+			Mode="tcp"
+			Description="Container Port: 80"
+			Type="Port"
+			Display="always"
+			Required="true"
+			Mask="false">8080</Config>
+	<Config
+			Type="Path"
+			Name="Public HTML directory"
+			Target="/var/www/html"
+			Default="/mnt/user/appdata/nginx-www"
+			Mode="rw"
+			Description="This is where NGINX will read the website from."
+			Required="true">/mnt/user/appdata/nginx-www</Config>
 </Container>
