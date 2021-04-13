@@ -7,6 +7,7 @@
   <Privileged>false</Privileged>
   <Overview>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Overview>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
+	<Icon>https://raw.githubusercontent.com/harrywebster/unraid-docker-templates/main/images/icon/nginx-with-php-and-phalcon.png</Icon>
 	<TemplateURL>https://github.com/harrywebster/unraid-docker-templates/blob/main/nginx.xml</TemplateURL>
   <DateInstalled>1618334246</DateInstalled>
   <Description>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Description>
