@@ -34,7 +34,7 @@
 	<Config
 			Type="Path"
 			Name="Public HTML directory"
-			Target="/var/www/html"
+			Target="/var/www/nginx-default"
 			Default="/mnt/user/appdata/nginx-www"
 			Mode="rw"
 			Description="This is where NGINX will read the website from."
