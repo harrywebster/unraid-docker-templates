@@ -9,4 +9,7 @@ source ~/.bashrc
 /etc/init.d/php7.2-fpm restart
 
 # start up bash to use for access
-nginx -g "daemon off;"
+#nginx -g "daemon off;"
+nginx
+
+/bin/bash

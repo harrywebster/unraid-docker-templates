@@ -23,11 +23,11 @@
   </Networking>
   <Labels/>
   <Config
-			Name="Host Port 1"
+			Name="HTTP"
 			Target="80"
 			Default="8080"
 			Mode="tcp"
-			Description="Container Port: 80"
+			Description="Allow NGINX HTTP traffic"
 			Type="Port"
 			Display="always"
 			Required="true"
@@ -35,7 +35,7 @@
 	<Config
 			Type="Path"
 			Name="Public HTML directory"
-			Target="/var/www/nginx-default"
+			Target="/var/www/html"
 			Default="/mnt/user/appdata/nginx-www"
 			Mode="rw"
 			Description="This is where NGINX will read the website from."
