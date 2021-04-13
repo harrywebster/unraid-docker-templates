@@ -4,20 +4,11 @@
   <Repository>harrywebster/unraid-nginx</Repository>
   <Registry>https://hub.docker.com/repository/docker/harrywebster/unraid-nginx</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Privileged>false</Privileged>
-  <Support></Support>
-  <Project/>
   <Overview>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Overview>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL/>
-  <ExtraParams/>
-  <PostArgs/>
+	<TemplateURL>https://github.com/harrywebster/unraid-docker-templates/blob/main/nginx.xml</TemplateURL>
   <DateInstalled>1618334246</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <DonateImg/>
-  <MinVer/>
   <Description>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -29,8 +20,6 @@
       </Port>
     </Publish>
   </Networking>
-  <Data/>
-  <Environment/>
   <Labels/>
   <Config
 			Name="Host Port 1"
