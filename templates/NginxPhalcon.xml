@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>NGINX with PHP and Phalcon</Name>
   <Repository>https://hub.docker.com/repository/docker/harrywebster/unraid-nginx</Repository>
-  <Registry>https://registry.hub.docker.com/u/harrywebster/nginx-unraid</Registry>
+  <Registry>https://registry.hub.docker.com/repository/docker/harrywebster/unraid-nginx</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Overview>Basic PHP webserver with Phalcon plugin installed running on NGINX for use with UnRaid.</Overview>
