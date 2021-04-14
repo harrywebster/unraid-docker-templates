@@ -34,8 +34,16 @@
 			Type="Path"
 			Name="Public HTML directory"
 			Target="/var/www/html"
-			Default="/mnt/user/appdata/nginx-www"
+			Default="/mnt/user/appdata/NGINX-with-PHP-and-Phalcon/www"
 			Mode="rw"
 			Description="This is where NGINX will read the website from."
-			Required="true">/mnt/user/appdata/nginx-www</Config>
+			Required="true">/mnt/user/appdata/NGINX-with-PHP-and-Phalcon/www</Config>
+	<Config
+			Type="Path"
+			Name="Phalcon APP directory"
+			Target="/var/www/app"
+			Default="/mnt/user/appdata/NGINX-with-PHP-and-Phalcon/app"
+			Mode="rw"
+			Description="This is where NGINX will read the website from."
+			Required="true">/mnt/user/appdata/NGINX-with-PHP-and-Phalcon/app</Config>
 </Container>
