@@ -14,22 +14,22 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>1880</HostPort>
+        <HostPort>8123</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Config
-      Name="HTTP"
+      Name="Webapp"
       Target="80"
-      Default="8080"
+      Default="8123"
       Mode="tcp"
-      Description="Allow NGINX HTTP traffic"
+      Description="Allow website traffic to the home automation app"
       Type="Port"
       Display="always"
       Required="true"
-      Mask="false">8080</Config>
+      Mask="false">8123</Config>
   <Config
       Type="Path"
       Name="Persistant config directory"
