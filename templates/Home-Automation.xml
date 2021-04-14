@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Overview>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.</Overview>
-  <WebUI>http://[IP]:[PORT:1880]</WebUI>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
   <Icon>https://raw.githubusercontent.com/harrywebster/unraid-docker-templates/main/images/icon/home-automation.png</Icon>
   <TemplateURL>https://raw.githubusercontent.com/harrywebster/unraid-docker-templates/main/templates/Home-Automation.xml</TemplateURL>
   <Description>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.</Description>
