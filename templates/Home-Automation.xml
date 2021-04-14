@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Home-automation</Name>
+  <Repository>homeassistant/home-assistant:stable</Repository>
+  <Registry>https://registry.hub.docker.com/repository/docker/homeassistant/home-assistant</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.</Overview>
+  <WebUI>http://[IP]:[PORT:1880]</WebUI>
+  <Icon>https://raw.githubusercontent.com/harrywebster/unraid-docker-templates/main/images/icon/home-automation.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/harrywebster/unraid-docker-templates/main/templates/Home-Automation.xml</TemplateURL>
+  <Description>Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config
+      Name="HTTP"
+      Target="80"
+      Default="8080"
+      Mode="tcp"
+      Description="Allow NGINX HTTP traffic"
+      Type="Port"
+      Display="always"
+      Required="true"
+      Mask="false">8080</Config>
+  <Config
+      Type="Path"
+      Name="Persistant config directory"
+      Target="/config"
+      Default="/mnt/user/appdata/Home-automation/config"
+      Mode="rw"
+      Description="The persistant config files for the home automation app."
+      Required="true">/mnt/user/appdata/Home-automation/config</Config>
+</Container>
