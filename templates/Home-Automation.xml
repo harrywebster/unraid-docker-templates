@@ -15,14 +15,14 @@
     <Publish>
       <Port>
         <HostPort>8123</HostPort>
-        <ContainerPort>80</ContainerPort>
+        <ContainerPort>8123</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Config
       Name="Webapp"
-      Target="80"
+      Target="8123"
       Default="8123"
       Mode="tcp"
       Description="Allow website traffic to the home automation app"
