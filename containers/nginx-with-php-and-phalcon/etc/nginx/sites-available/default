@@ -21,7 +21,7 @@ server {
 					try_files $uri =404;
 
 					include snippets/fastcgi-php.conf;
-					fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+					fastcgi_pass unix:/run/php/php7.4-fpm.sock;
 
 					include fastcgi_params;
 					fastcgi_split_path_info					^(.+\.php)(/.+)$;
