@@ -10,7 +10,7 @@ RUN \
 	apt-get install -y software-properties-common && \
 	add-apt-repository -y ppa:nginx/stable && \
 	apt-get update && \
-	apt-get install -y zip unzip apt-utils nginx nginx-extras nano curl openssl mysql-client && \
+	apt-get install -y zip unzip apt-utils nginx nginx-extras nano curl openssl mariadb-server mariadb-client && \
 	rm -rf /var/lib/apt/lists/* && \
 	chown -R www-data:www-data /var/lib/nginx
 
@@ -50,13 +50,6 @@ RUN \
 # Copy config files over to the docker image
 COPY etc /etc
 COPY root /root
+COPY database.sql /database.sql
 
-# Set the timezone to be UTC (AKA GMT... always)
-RUN \
-	echo "Etc/UTC" > /etc/timezone && \
-	dpkg-reconfigure -f noninteractive tzdata
-
-# Fix permissions on copied files.
-RUN chmod 755 /root/bin/entrypoint.sh
-
-ENTRYPOINT /root/bin/entrypoint.sh
+ENTRYPOINT /bin/bash /root/bin/entrypoint.sh
