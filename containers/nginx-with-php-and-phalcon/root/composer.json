@@ -1,5 +1,6 @@
 {
 	"require": {
+		"erusev/parsedown": "*"
 	},
 	"autoload": {
 	}

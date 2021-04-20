@@ -10,7 +10,7 @@ RUN \
 	apt-get install -y software-properties-common && \
 	add-apt-repository -y ppa:nginx/stable && \
 	apt-get update && \
-	apt-get install -y zip unzip apt-utils nginx nginx-extras nano curl openssl mariadb-server mariadb-client && \
+	apt-get install -y zip unzip apt-utils nginx nginx-extras nano curl openssl mariadb-server mariadb-client git && \
 	rm -rf /var/lib/apt/lists/* && \
 	chown -R www-data:www-data /var/lib/nginx
 

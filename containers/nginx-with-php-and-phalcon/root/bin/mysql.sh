@@ -9,6 +9,7 @@
 MYSQL_DB=waterme
 MYSQL_USER=watermeuser
 MYSQL_PASS=mmkWSUWj1_0sd8
+MYSQL_ROOT_PASS=j189s8J_UWSHM_NMVVss
 
 set -e
 set -x
@@ -30,11 +31,11 @@ mysql -e "SET GLOBAL wait_timeout = 28800"
 mysql -e "CREATE DATABASE $MYSQL_DB"
 mysql $MYSQL_DB < /database.sql
 
-mysql -e "CREATE USER '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASS'"
-mysql -e "GRANT SELECT ON $MYSQL_DB.* TO $MYSQL_USER@'%' IDENTIFIED BY '$MYSQL_PASS'"
+mysql -e "CREATE USER '$MYSQL_USER'@'localhost' IDENTIFIED BY '$MYSQL_PASS'"
+mysql -e "GRANT ALL ON $MYSQL_DB.* TO $MYSQL_USER@'localhost' IDENTIFIED BY '$MYSQL_PASS'"
 
 # Permit root login without password from outside container.
-#mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY '' WITH GRANT OPTION"
+mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY '$MYSQL_ROOT_PASS' WITH GRANT OPTION"
 
 mysql -e "FLUSH PRIVILEGES"
 
