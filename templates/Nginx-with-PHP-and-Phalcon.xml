@@ -20,6 +20,24 @@
       </Port>
     </Publish>
   </Networking>
+	<Config
+			Type="Variable"
+			Name="AWS API access ID"
+			Target="AWS_ACCESS_KEY_ID"
+			Default=""
+			Description="The IAM API access ID"
+			Mask="true"
+			Display="advanced"
+			Required="false">AWS API access ID</Config>
+	<Config
+			Type="Variable"
+			Name="AWS API access key"
+			Target="AWS_SECRET_ACCESS_KEY"
+			Default=""
+			Description="The IAM API access key"
+			Mask="true"
+			Display="advanced"
+			Required="false">AWS_SECRET_ACCESS_KEY</Config>
   <Config
 			Name="HTTP"
 			Target="80"
