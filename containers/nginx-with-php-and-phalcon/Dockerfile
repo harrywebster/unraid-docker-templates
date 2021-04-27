@@ -52,4 +52,9 @@ COPY etc /etc
 COPY root /root
 COPY database.sql /database.sql
 
+# Make a nice upload application
+RUN \
+	mv /root/bin/upload-via-s3.sh /usr/bin/upload-via-sh && \
+	chmod 755 /usr/bin/upload-via-sh
+
 ENTRYPOINT /bin/bash /root/bin/entrypoint.sh
