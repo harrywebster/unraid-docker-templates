@@ -15,6 +15,3 @@ CREATE TABLE `category` (
 	`name` varchar(220) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-#INSERT INTO category SET id=1, name='Programming';
-#INSERT INTO/ post SET date='2020-04-17', category_id=1, author_id=1, title='Hello world!', content='This is just a test that everything is working as it should be.', status='posted';
