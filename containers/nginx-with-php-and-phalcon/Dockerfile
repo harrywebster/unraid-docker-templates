@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.10
 
 # Configure version numbers and settings
 ENV DEBIAN_FRONTEND noninteractive
